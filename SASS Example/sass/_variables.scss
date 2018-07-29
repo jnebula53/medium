@@ -1,0 +1,28 @@
+$font: 'Muli', sans-serif;
+$light-weight: 200;
+$medium-weight: 400;
+$heavy-weight: 700;
+$first-color: #4825A6;
+$second-color: #F4F4F4;
+$third-color: #FF9019;
+
+//@include breakpoint(breakpointname) {/* Styles */}
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == medium {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else if $point == small {
+    @media (min-width: 512px) { @content ; }
+  }
+}
+
+//@extend %nav-text;
+%nav-text {
+  padding: 0 20px;
+  font-size: 14px;
+  color: $second-color;
+  text-decoration: none;
+}

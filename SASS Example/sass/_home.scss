@@ -1,0 +1,154 @@
+//CSS Box Model
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+//Body
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font;
+  font-size: 16px;
+  font-weight: $light-weight;
+  background-color: $first-color;
+  color: $second-color;
+  line-height: 142%;
+}
+
+
+
+//Header
+header {
+  max-width: 940px;
+  padding: 12px 0 16px 0;
+  margin: 0 auto;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: $heavy-weight;
+    color: $third-color;
+  }
+  /*----------SASS Mixin----------*/
+  @include breakpoint(small) {
+    h1 {
+      font-size: 28px;
+    }
+  }//end breakpoint:small
+  /*----------SASS Mixin----------*/
+  @include breakpoint(medium) {
+    h1 {
+      font-size: 32px;
+    }
+  }//end breakpoint:medium
+  /*----------SASS Mixin----------*/
+  @include breakpoint(large) {
+    h1 {
+      font-size: 36px;
+    }
+  }//end breakpoint:large
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  li {
+    border-right: 1px solid rgba(255,255,255,.2);
+  }
+  li:last-child {
+    border-right: none;
+  }
+  /*----------SASS Inheritance----------*/
+  a {
+    @extend %nav-text;
+  }
+  li:last-child a {
+    padding-right: 0;
+  }
+}
+
+
+
+
+//Main
+main {
+  max-width: 940px;
+  margin: 0 auto;
+  .banner {
+    max-width: 940px;
+    max-height: 240px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .banner img {
+    width: 100%;
+  }
+  p {
+    margin: 4px 0 12px 0;
+  }
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*----------SASS Operation 1----------*/
+    grid-column-gap: 35 * 1px;
+    /*----------SASS Operation 2----------*/
+    grid-row-gap: 8px + 8px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: $medium-weight;
+    color: $third-color;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+  }
+  .thumb {
+    width: 100%;
+  }
+  .thumb img {
+    width: 100%;
+  }
+  .content-one {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+  .content-two {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+}
+
+
+
+
+//Footer
+footer {
+  max-width: 940px;
+  margin: 10px auto;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  li {
+    border-right: 1px solid rgba(255,255,255,.2);
+  }
+  li:last-child {
+    border-right: none;
+  }
+  /*----------SASS Inheritance----------*/
+  a {
+    @extend %nav-text;
+  }
+}
