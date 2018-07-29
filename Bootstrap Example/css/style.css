@@ -1,0 +1,112 @@
+/* ****************************** NAV BAR ****************************** */
+.nav-background {
+	background-color: #222222;
+	border-color: #FFFFFF;
+}
+
+.navbar {
+	width: 100% !important;
+	margin-bottom: 0;
+	border-radius: 0;
+	z-index: 99999;
+}
+
+
+
+
+
+/* ****************************** CAROUSEL ****************************** */
+#myCarousel .carousel-inner .item img {
+    margin: 0 auto;
+}
+
+#myCarousel .carousel-control.left, .carousel-control.right {
+    background-image: none;
+	color: #000000;
+}
+
+
+
+
+
+/* ****************************** THUMBNAILS ****************************** */
+.thumbnail-background {
+	background-color: #2872E8;
+	margin: 60px 0;
+	color: #FFFFFF;
+	padding: 20px 0;
+}
+
+.thumbnails h2 {
+	text-align: center;
+	margin-bottom: 48px;
+	font-weight: bold;
+}
+
+.thumbnail img {
+	height: 171px;
+	width: 171px;
+}
+
+.caption {
+	text-align: center;
+}
+
+
+
+
+
+/* ****************************** CTA / FORM ****************************** */
+.container .CTA {
+	background-color: #FFFFFF;
+	margin: 75px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	.vertical-align {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.form-inline {
+	text-align: right;
+}
+
+
+
+
+
+/* ****************************** ACCORDION ****************************** */
+.accordion-background {
+	background-color: #2872E8;
+	margin: 60px 0 0 0;
+	color: #FFFFFF;
+	padding: 20px 0;
+}
+
+.panel-body {
+	color: #000000;
+}
+
+.accordion h2 {
+	text-align: center;
+	margin-bottom: 48px;
+	font-weight: bold;
+}
+
+
+
+
+
+/* ****************************** FOOTER ****************************** */
+.footer-background {
+	background-color: #222222;
+	padding: 16px 0;
+	
+}
+footer p {
+	margin: auto auto;
+	color: #888888;
+	text-align: center;
+}
